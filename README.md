@@ -8,6 +8,6 @@ This was my first JQuery project ever and I've finally posted it. That said, I h
 
 **To use...**
 ---------
-Unzip the JSON files and place all the files except the .py on a web server. There are play instructions available in the application. 
+Unzip the JSON files to a folder with the same name as the zip (question-files) and place all the project files except the feud-parser folder (the Python files) on a web server. There are play instructions available in the application.
 
-The Python files were one time use, but you could use them to scrape the fan site again.
+The Python files were one time use, but you could use them to scrape the fan site again. You probably should obtain permission if you do that.

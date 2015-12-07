@@ -124,7 +124,7 @@ function loadQuestion() {
     var json_data;
     $.ajax({
         async: false, //must be blocking to ensure immediate availability of data afterwards
-        url: json_url,
+        url: 'question-files/' + json_url,
         dataType: "json",
         success: function (data) {
             json_data = data;
