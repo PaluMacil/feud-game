@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Family Feud</title>
+  <link rel="stylesheet" href="./familyfeud.css" type="text/css"></link>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+  <script src="./familyfeud-round.js" type="text/javascript"></script>
+</head>
+
+<body>
+  <div id="main-menu-header" class="gamemode">
+    <div id="main-menu-header-text"><h1>Family Feud</h1></div>
+    <p>Select from the questions below, click random in the bottom right corner, or type a question number from 1 to 1064 and then click Go To.</p>
+    <p>Press 'h' for help and hotkeys.</p>
+  </div>
+  <div id="main-menu" class="gamemode"></div>
+  <div id="help" class="help">
+	  <p>There are currently 1064 questions loaded. About 90% of them also have answers loaded. The random question button in the bottom right will load a
+	  random question without checking whether there are answers loaded for that question. You may also use the main menu to pick a question or use Go To
+	  which loads the question number in the textbox. The score (center of gameboard) and strikes (lower left) are reset each round, so you'll need to keep
+	  a tally for each team as you play.</p>
+	  <p>Press 'h' to show or hide (h)elp.</p>
+	  <p>Press 'a' to show or hide the question for the currently displayed (a)nswers.</p>
+	  <p>Press 'q' to show or hide all the (q)uestions.</p>
+	  <p>Press 'r' to load a (r)andom question.</p>
+	  <p>Press 'enter' to load the question in the textbox.</p>
+	  <p>Press 's' to add to the (s)trike count!.</p>
+	  
+  </div>
+  <div id="background">
+    <div id="wrong"></div>
+    
+    <div id="rotating-answers">
+    <div class="wrapper">
+      <div class="cell">
+        <section class="container active" id="answer1" data-score="43">
+          <div class="answer">
+            <figure class="front"><span>1</span></figure>
+            <figure class="back">Answer one <span class="score">43</span></figure>
+          </div>
+        </section>
+
+        <section class="container active" id="answer2" data-score="31">
+          <div class="answer">
+            <figure class="front"><span>2</span></figure>
+            <figure class="back">Answer two <span class="score">31</span></figure>
+          </div>
+        </section>
+
+        <section class="container active" id="answer3" data-score="23">
+           <div class="answer">
+            <figure class="front"><span>3</span></figure>
+            <figure class="back">Answer three <span class="score">23</span></figure>
+          </div>
+        </section>
+
+        <section class="container active" id="answer4" data-score="3">
+           <div class="answer">
+            <figure class="front"><span>4</span></figure>
+            <figure class="back">Answer four <span class="score">3</span></figure>
+          </div>
+        </section>
+      
+        <section class="container" id="answer5">
+          <div class="inactive"></div>
+        </section> 
+      </div>
+      
+      <div class="cell">
+        <section class="container" id="answer6">
+          <div class="inactive"></div>
+        </section>
+        <section class="container" id="answer7">
+          <div class="inactive"></div>
+        </section>
+        <section class="container" id="answer8">
+          <div class="inactive"></div>
+        </section>
+        <section class="container" id="answer9">
+          <div class="inactive"></div>
+        </section>
+        <section class="container" id="answer10">
+          <div class="inactive"></div>
+        </section>                
+      </div>
+      </div>
+      <div id="score"></div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <button id="strike" type="button">Strike!</button>
+    Count: <span id="strike-count">0</span>
+    
+    <span class="next">
+        <button id="goto" type="button">Go To:</button>
+        <input id="qnum" type="text" name="qnum" size="4" maxlength="4">
+        <button id="random" type="button">Random Question</button>
+    </span>
+  </div>
+
+  <iframe id="sound" style="display: none"></iframe>
+</body>
+</html>
